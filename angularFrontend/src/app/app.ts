@@ -17,21 +17,21 @@ import { MobileWarningModalComponent } from '@components/mobile-warning-modal/mo
 })
 export class App implements OnInit, OnDestroy {
   protected readonly title = signal('frontend');
-  isMobile: boolean = true;
-  showMobileWarning: boolean = true;
+  isMobile: boolean = false;
+  showMobileWarning: boolean = false;
   private destroy$ = new Subject<void>();
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngOnInit() {
+    console.clear()
     if (isPlatformBrowser(this.platformId)) {
-
-      const hasSeenWarning = localStorage.getItem('hasSeenMobileWarning');
+      //const hasSeenWarning = localStorage.getItem('hasSeenMobileWarning');
       this.checkScreenSize();
 
       window.addEventListener('resize', () => this.checkScreenSize());
 
-      if (this.isMobile && hasSeenWarning !== 'true') {
+      if (this.isMobile) {
         this.showMobileWarning = true;
       }
     }
@@ -43,9 +43,12 @@ export class App implements OnInit, OnDestroy {
   }
 
   checkScreenSize() {
-    // Additional check to ensure we're in a browser environment
     if (typeof window !== 'undefined') {
-      this.isMobile = window.innerWidth <= 768; // Adjust breakpoint as needed
+      if (window.innerWidth <= 768) {
+        this.isMobile = true;
+      } else {
+        this.isMobile = false;
+      }
     }
   }
 
