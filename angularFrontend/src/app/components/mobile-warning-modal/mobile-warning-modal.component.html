@@ -1,0 +1,17 @@
+<div class="modal-overlay" (click)="onDismiss()">
+  <div class="modal-container" (click)="$event.stopPropagation()">
+    <div class="modal-header">
+      <h2>Pardon Our Dust</h2>
+      <button class="close-button" (click)="onDismiss()">×</button>
+    </div>
+    <div class="modal-content">
+      <p>We are in the process of updating our website.</p>
+      <p>Unfortunately, our new site is not yet optimized for mobile viewing.</p>
+      <p>For the best possible experience please visit our older, more mobile friendly website.</p>
+    </div>
+    <div class="modal-actions">
+      <button class="btn-continue" (click)="onDismiss()">Continue to Desktop Site</button>
+      <button class="btn-redirect" (click)="onRedirect()">Visit Mobile Site</button>
+    </div>
+  </div>
+</div>

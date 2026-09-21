@@ -9,13 +9,14 @@
       <span class="price">${{yearlyPrice()}} / yr. (${{monthlyPrice()}}/ mo.)</span>
 
 
-      <ul>
+      <div class="membership-card-content">
         @for (feature of features(); track $index) {
-          <li><span>{{feature}}</span></li>
+          <img src="images/check-mark-swoop.png" />
+          <span>{{feature}}</span>
         }
-      </ul>
+      </div>
     </div>
 
-    <app-cta-button [buttonText]="'Pick Plan'" [buttonHeight]="'2.5rem'"></app-cta-button>
+    <app-cta-button [buttonText]="'Pick Plan'" [buttonHeight]="'2.5rem'" [target]="target()"></app-cta-button>
   </div>
 </div>

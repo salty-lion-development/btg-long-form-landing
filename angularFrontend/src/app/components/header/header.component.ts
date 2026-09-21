@@ -8,4 +8,12 @@ import { Component, input } from '@angular/core';
 })
 export class HeaderComponent {
   links = input.required<{ label: string; href: string }[]>();
+
+    navigateToPriceSection() {
+    const element = document.getElementById('pricing');
+
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
 }

@@ -45,8 +45,6 @@ export class GifPlayerComponent implements AfterViewInit {
   }
 
   replay(): void {
-    console.clear();
-    console.log("This was clicked!");
     if (!isPlatformBrowser(this.platformId)) return;
 
     this.playCount = 0;

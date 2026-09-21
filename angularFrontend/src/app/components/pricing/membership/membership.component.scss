@@ -22,7 +22,7 @@
   &:has([data-most-popular]) {
     --border-stroke: 0.5em;
     --card-padding: 0em 2em 1em 2em;
-    --accent-color: #0061ff;
+    --accent-color: #0aadcc;
 
     .most-popular-label {
       visibility: unset;
@@ -84,23 +84,44 @@
     font-weight: 600;
   }
 
-  ul {
-    font-size: 1.25rem;
-    padding: 1em 0;
+  // ul {
+  //   font-size: 1.25rem;
+  //   padding: 1em 0;
+  //   border-top: solid 0.2em;
+  //   //filter: brightness(0) saturate(100%) invert(56%) sepia(74%) saturate(1813%) hue-rotate(148deg) brightness(90%) contrast(92%);
+
+  //   li {
+  //     list-style-type: none;
+
+  //     span {
+  //       color: rgba(255, 255, 255, 75%);
+  //     }
+
+  //     &:before {
+  //       content: "\2610";
+  //       font-weight: 900;
+  //       margin-right: 0.5em;
+  //     }
+  //   }
+  // }
+
+  .membership-card-content {
+    display: grid;
+    grid-template-columns: 1rem auto;
+    gap: .5rem;
+    padding: 1.8rem;
+    font-size: 1.08rem;
     border-top: solid 0.2em;
+    margin-top: .5rem;
 
-    li {
-      list-style-type: none;
+    img {
+      height: 1rem;
+      width: 1rem;
+      filter: brightness(0) saturate(100%) invert(56%) sepia(74%) saturate(1813%) hue-rotate(148deg) brightness(90%) contrast(92%);
+    }
 
-      span {
-        color: rgba(255, 255, 255, 75%);
-      }
-
-      &:before {
-        content: "\2610";
-        font-weight: 900;
-        margin-right: 0.5em;
-      }
+    span {
+      color: rgba(255, 255, 255, 75%);
     }
   }
 

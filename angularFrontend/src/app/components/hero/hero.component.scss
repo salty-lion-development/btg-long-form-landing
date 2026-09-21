@@ -71,15 +71,22 @@
                         border-radius: 12px;
 
                         &.journey-btn {
-                            background-color: #036396;
-                            background-color: #0061ff;
                             background-color: #0aadcc;
                             color: #ffffff;
+                            border: solid 2px #0aadcc;
                         }
 
                         &.curriculum-btn {
                             background-color: #d8e4f0;
                             color: #131d26;
+                        }
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+
+                        &:active {
+                            background-color: #09768a;
                         }
                     }
                 }

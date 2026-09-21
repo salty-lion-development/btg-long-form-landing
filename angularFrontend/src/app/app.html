@@ -11,3 +11,10 @@
     <app-footer></app-footer>
   </div>
 </div>
+
+@if(showMobileWarning) {
+  <app-mobile-warning-modal
+    (dismiss)="onWarningDismissed()"
+    (redirectToMobileSite)="onRedirectToMobile()">
+  </app-mobile-warning-modal>
+}

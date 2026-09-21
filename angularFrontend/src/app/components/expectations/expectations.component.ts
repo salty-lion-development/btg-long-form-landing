@@ -19,7 +19,7 @@ const PILLARS: PillarData[] = [
     iconSrc: 'images/expectations/clear-path-icon.png',
     title: 'A Clear Path Forward',
     body: 'Knowing how much you’ve progressed over time can be challenging when you don’t have a standard to measure your progress against. That&apos;s why we built the 12-Milestone Framework. You will always know where you are in your journey and what&apos;s next.',
-    mediaSrc: 'videos/12_logro.mp4'
+    mediaSrc: 'videos/12_LOGRO_LAPTOP.mp4'
   },
   {
     iconSrc: 'images/expectations/community-icon.png',

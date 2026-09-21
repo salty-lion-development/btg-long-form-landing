@@ -1,4 +1,4 @@
-import { Component, Input, HostBinding, OnInit} from '@angular/core';
+import { Component, Input, HostBinding } from '@angular/core';
 import { EmbeddedVidComponent } from '@components/embedded-vid/embedded-vid.component'
 
 @Component({
@@ -7,7 +7,7 @@ import { EmbeddedVidComponent } from '@components/embedded-vid/embedded-vid.comp
   templateUrl: './challenge-result.html',
   styleUrl: './challenge-result.scss',
 })
-export class ChallengeResult implements OnInit {
+export class ChallengeResult {
   @Input() mediaSource: string = '';
   @Input() iconSrc: string = 'images/cactus.png';
   @Input() challengeTitle: string = 'THE CHALLENGE';
@@ -31,9 +31,5 @@ export class ChallengeResult implements OnInit {
     }
 
     return true;
-  }
-
-  ngOnInit() {
-    console.log(`Background Color in the main component:  ${this.backgroundColor}`);
   }
 }

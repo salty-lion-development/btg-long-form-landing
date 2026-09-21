@@ -7,6 +7,7 @@ import { CtaButtonComponent } from '@components/cta-button/cta-button.component'
   templateUrl: './membership.component.html',
   styleUrl: './membership.component.scss',
 })
+
 export class MembershipComponent {
   name = input<string>();
   yearlyPrice = input<string>();
@@ -14,4 +15,5 @@ export class MembershipComponent {
   isMostPopular = input<boolean>();
   features = input<string[]>();
   cta = input<string>();
+  target = input.required<string>();
 }

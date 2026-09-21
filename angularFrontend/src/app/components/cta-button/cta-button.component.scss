@@ -8,7 +8,15 @@ button {
     width: fit-content;
     padding: 0 2rem 0 2rem;
     border-radius: 12px;
-    //background-color: #0061ff;
     background-color: var(--cta-button-bg);
     color: #ffffff;
+    border: solid 2px var(---cta-button-border-bg);
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:active {
+        background-color: #09768a;
+    }
 }

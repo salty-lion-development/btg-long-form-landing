@@ -3,5 +3,8 @@
   "private": true,
   "scripts": {
     "dev": "concurrently \"cd angularFrontend && ng serve\" \"cd nestBackend && npm run start:dev\""
+  },
+  "dependencies": {
+    "@angular/cdk": "^22.1.6"
   }
 }

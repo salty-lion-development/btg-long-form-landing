@@ -16,7 +16,8 @@ export class PricingComponent {
       yearlyPrice: "299",
       monthlyPrice: "39",
       features: Array("Weekly speaking prompts","Feedback from our native conversation teachers","Practice sprints and challenges","Grammar courses"),
-      cta: "Purchase"
+      cta: "Purchase",
+      target: "https://btgspanish.circle.so/checkout/btg-spanish-community-membership"
     },
     {
       name: "Lite",
@@ -24,14 +25,16 @@ export class PricingComponent {
       monthlyPrice: "179",
       features: Array("Everything in Community", "Personalized conversation teacher match", "1 weekly conversation class", "48-hr reschedule window", "Quarterly progress reports"),
       isMostPopular: true,
-      cta: "Purchase"
+      cta: "Purchase",
+      target: "https://btgspanish.circle.so/checkout/lite-membership"
     },
     {
       name: "VIP",
       yearlyPrice: "3,999",
       monthlyPrice: "499",
       features: Array("Everything in Community", "Personalized conversation teacher match", "3 weekly conversation classes", "24-hr reschedule window", "Quarterly progress reports", "Quarterly coaching sessions"),
-      cta: "Purchase"
+      cta: "Purchase",
+      target: "https://btgspanish.circle.so/checkout/full-membership"
     },
   ];
 }
