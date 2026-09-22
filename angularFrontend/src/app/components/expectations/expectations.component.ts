@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { PillarComponent } from './pillar/pillar.component';
 import { PillarData } from './pillar/pillar-data.type';
+import { CtaComponent } from '@components/cta/cta.component';
 
 const PILLARS: PillarData[] = [
   {
@@ -31,7 +32,7 @@ const PILLARS: PillarData[] = [
 
 @Component({
   selector: 'app-expectations',
-  imports: [PillarComponent],
+  imports: [PillarComponent, CtaComponent],
   templateUrl: './expectations.component.html',
   styleUrl: './expectations.component.scss',
 })
