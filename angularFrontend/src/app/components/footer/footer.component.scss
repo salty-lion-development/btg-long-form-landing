@@ -24,6 +24,59 @@
         }
     }
 
+    .socials-container, .terms-and-email-container  {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 33%;
+        color: #f6dd2b;
+
+        a {
+            color: #f6dd2b;
+            padding: 0 0.5rem 0 0.5rem;
+        }
+    }
+
+    .terms-and-email-container {
+        flex-direction: column;
+
+        .terms-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .socials-container {
+        .socials-wrapper {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            height: fit-content;
+            width: 19rem;
+
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 4rem;
+                width: 3rem;
+                background-color: #f6dd2b;
+                border-radius: 35px;
+
+                img {
+                    height: 2rem;
+                    width: 2rem;
+                    filter: brightness(0) saturate(100%) invert(11%) sepia(53%) saturate(505%) hue-rotate(177deg) brightness(96%) contrast(91%);
+                }
+            }
+        }
+
+
+    }
+
     .grid-wrapper {
         width: stretch;
         height: 100%;
