@@ -11,14 +11,14 @@ import { MembershipComponent } from './membership/membership.component';
 })
 export class PricingComponent {
   readonly memberships = [
-    {
-      name: "Community",
-      yearlyPrice: "299",
-      monthlyPrice: "39",
-      features: Array("Weekly speaking prompts","Feedback from our native conversation teachers","Practice sprints and challenges","Grammar courses"),
-      cta: "Purchase",
-      target: "https://btgspanish.circle.so/checkout/btg-spanish-community-membership"
-    },
+    // {
+    //   name: "Community",
+    //   yearlyPrice: "299",
+    //   monthlyPrice: "39",
+    //   features: Array("Weekly speaking prompts","Feedback from our native conversation teachers","Practice sprints and challenges","Grammar courses"),
+    //   cta: "Purchase",
+    //   target: "https://btgspanish.circle.so/checkout/btg-spanish-community-membership"
+    // },
     {
       name: "Lite",
       yearlyPrice: "1,799",

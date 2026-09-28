@@ -1,37 +1,40 @@
 <div class="footer-container">
   <div class="logo-container">
-    <img class="logo" src="images/btg-icon-and-name-logo.png">
+    <img class="logo" src="images/btg-icon-and-name-logo.png" alt="BTG logo" />
   </div>
 
   <div class="socials-container">
     <div class="socials-wrapper">
-      <a>
-        <img src="images/instagram.png"/>
+      <a href="https://www.instagram.com/btgspanish">
+        <img src="images/instagram.png" alt="Instagram" />
       </a>
-      <a>
-        <img src="images/facebook.png"/>
+      <a href="https://www.facebook.com/btglanguage">
+        <img src="images/facebook.png" alt="Facebook" />
       </a>
-      <a>
-        <img src="images/linkedin.png"/>
+      <a href="https://www.linkedin.com/company/bridge-the-gap-spanish/">
+        <img src="images/linkedin.png" alt="LinkedIn" />
       </a>
-      <a>
-        <img src="images/youtube.png"/>
+      <a href="https://www.youtube.com/@btgspanish">
+        <img src="images/youtube.png" alt="YouTube" />
       </a>
     </div>
   </div>
 
   <div class="terms-and-email-container">
-    <h5>Email Address: <span>hola@btg-spanish.com</span></h5>
+    <h5
+      #tipTarget
+      (mouseenter)="show($event, 'Copy To Clipboard')"
+      (mousemove)="move($event)"
+      (mouseleave)="hide()"
+      (click)="copyToClipBoard()"
+    >
+      Email Address: <span #emailAddress>hola@btg-spanish.com</span>
+    </h5>
 
     <div class="terms-container">
-      <a class="terms" href="https://btgspanish.com/terms/">
-        Terms And Conditions
-      </a>
+      <a class="terms" href="https://btgspanish.com/terms/">Terms And Conditions</a>
       <span>|</span>
-      <a class="privacy" href="https://btgspanish.com/privacy/">
-        Privacy Policy
-      </a>
+      <a class="privacy" href="https://btgspanish.com/privacy/">Privacy Policy</a>
     </div>
   </div>
 </div>
-

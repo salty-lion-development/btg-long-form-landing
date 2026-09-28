@@ -8,11 +8,15 @@
   <p [innerHTML]="pillarData.body"></p>
 </div>
 
-@if (isVideo) {
-  <app-gif-player [videoSrc]="pillarData.mediaSrc"></app-gif-player>
-}
-@else {
-  <img [src]="pillarData.mediaSrc" />
-}
+<div class="media-container">
+  @if (isVideo) {
+    <app-gif-player [videoSrc]="pillarData.mediaSrc"></app-gif-player>
+  }
+  @else {
+    <img [class]="{clearPath: isClearPath}" [src]="pillarData.mediaSrc" />
+  }
+</div>
+
+
 
 

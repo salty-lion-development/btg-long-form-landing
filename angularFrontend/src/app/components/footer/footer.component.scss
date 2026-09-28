@@ -1,3 +1,4 @@
+//@import '@angular/cdk/overlay-prebuilt.css';
 :host {
     background-color: #1e293b;
 }
@@ -39,6 +40,44 @@
 
     .terms-and-email-container {
         flex-direction: column;
+
+        h5 {
+            position: relative;
+
+            &:hover {
+                //background-color: chartreuse;
+                cursor: pointer !important;
+            }
+
+            //#tip {
+                //width: fit-content !important;
+                // left: 50%;
+                // bottom: -125%;
+                // transform: translateX(-50%);
+            //}
+
+            // &::after {
+            //     content: attr(data-tip);
+            //     position: absolute;
+            //     //left: 50%;
+            //     // bottom: -125%;
+            //     // transform: translateX(-50%);
+            //         transform: translate(-65%, 60%);
+            //     white-space: nowrap;
+            //     padding: 4px 8px;
+            //     background: #111;
+            //     color: #fff;
+            //     font-size: 12px;
+            //     border-radius: 4px;
+            //     //opacity: 0;
+            //     pointer-events: none;
+            // }
+        }
+
+        h5:hover {
+            //background-color: orange;
+            cursor: pointer !important;
+        }
 
         .terms-container {
             display: flex;
