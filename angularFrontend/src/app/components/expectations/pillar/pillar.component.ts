@@ -18,5 +18,9 @@ export class PillarComponent {
     }
     return this.pillarData.mediaSrc.includes('.mp4') ? true : false;
   }
+
+  get isClearPath() {
+    return this.pillarData.mediaSrc.includes('clear_path_forward') ? true : false;
+  }
 }
 
