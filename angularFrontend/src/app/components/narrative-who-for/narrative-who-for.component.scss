@@ -1,0 +1,20 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  //background-color: #ecf4ff;
+  background-image: url('/images/BTG_BACKGROUND_V1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  z-index: -2;
+  //height: 150rem;
+  height: fit-content;
+  width: 100vw;
+  padding-bottom: 3rem;
+
+  app-narrative {
+    width: 100%;
+  }
+}

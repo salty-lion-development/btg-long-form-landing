@@ -1,8 +1,8 @@
-<div>
+<div class="pillar-icon">
   <img [src]="pillarData.iconSrc" />
 </div>
 
-<div>
+<div class="pillar-text">
   <h2>{{ pillarData.title }}</h2>
 
   <p [innerHTML]="pillarData.body"></p>
@@ -13,7 +13,7 @@
     <app-gif-player [videoSrc]="pillarData.mediaSrc"></app-gif-player>
   }
   @else {
-    <img [class]="{clearPath: isClearPath}" [src]="pillarData.mediaSrc" />
+    <img [class.conversationZoom]="isConversation" [class.clearPath]="isClearPath" [class.community]="isCommunity" [src]="pillarData.mediaSrc" />
   }
 </div>
 

@@ -1,12 +1,12 @@
 <div class="main-container">
   <div class="main-layout">
     <app-header [links]="[
-    { label: 'Home', href: '#home' },
-    { label: 'Sevices', href: '#services' },
-    { label: 'Memberships', href: '#pricing' },
-    ]"></app-header>
+    { label: 'Home', fragment: 'home' },
+    { label: 'Services', fragment: 'services' },
+    { label: 'Memberships', fragment: 'pricing' },
+  ]"></app-header>
 
-    <app-body></app-body>
+    <router-outlet />
 
     <app-footer></app-footer>
   </div>

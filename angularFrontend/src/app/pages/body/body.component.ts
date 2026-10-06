@@ -23,6 +23,7 @@ import { ChallengeResultAaronComponent } from '@components/challenge-result-aaro
 import { ChallengeResultMorganComponent } from '@components/challenge-result-morgan/challenge-result-morgan.component';
 import { ChallengeResultNakeshaComponent } from '@components/challenge-result-nakesha/challenge-result-nakesha.component';
 import { ChallengeResultRyanComponent } from '@components/challenge-result-ryan/challenge-result-ryan.component';
+import { NarrativeWhoForComponent } from '@components/narrative-who-for/narrative-who-for.component';
 
 
 @Component({
@@ -51,7 +52,8 @@ import { ChallengeResultRyanComponent } from '@components/challenge-result-ryan/
     ChallengeResultAaronComponent,
     ChallengeResultMorganComponent,
     ChallengeResultNakeshaComponent,
-    ChallengeResultRyanComponent
+    ChallengeResultRyanComponent,
+    NarrativeWhoForComponent
   ],
   templateUrl: './body.component.html',
   styleUrl: './body.component.scss',

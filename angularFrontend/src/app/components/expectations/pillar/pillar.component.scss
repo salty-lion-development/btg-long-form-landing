@@ -3,31 +3,6 @@
   grid-template-columns: 1fr 5fr 6fr;
   gap: 2em;
 
-  div>img {
-    height: auto;
-  }
-
-  .media-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 25px 25px 25px 25px;
-    }
-
-    .clearPath {
-      width: 70%;
-      height: 100%;
-    }
-  }
-
-
-
   div {
     h2 {
       font-size: 2rem;
@@ -35,6 +10,82 @@
 
     p {
       font-size: 1.5rem;
+    }
+
+    &.pillar-text {
+      width: 80%;
+    }
+
+    &.pillar-icon {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      img {
+        height: 10rem;
+        width: 10rem;
+        z-index: 1;
+      }
+    }
+
+    // &.media-container {
+    //   display: flex;
+    //   align-items: center;
+    //   justify-content: center;
+
+    //   img {
+    //     display: block;
+    //     width: 75%;
+    //     height: 100%;
+    //     object-fit: cover;
+    //     border-radius: 25px 25px 25px 25px;
+
+    //     &.conversationZoom{
+    //       width: 45rem;
+    //       object-fit: cover;
+    //     }
+
+    //     &.clearPath{
+    //       width: 37rem;
+    //     }
+
+    //     &.community{
+    //       width: 35rem;
+    //     }
+    //   }
+    // }
+
+    &.media-container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      min-height: 0;
+      overflow: hidden;
+
+      img {
+        display: block;
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        border-radius: 25px;
+
+        &.conversationZoom {
+          max-width: 65%;
+          max-height: 100%;
+        }
+
+        &.clearPath {
+          max-width: 80%;
+          max-height: 100%;
+        }
+
+        &.community {
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
     }
   }
 }

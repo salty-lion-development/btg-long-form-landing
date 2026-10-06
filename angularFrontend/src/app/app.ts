@@ -1,9 +1,8 @@
 import { Component, signal, OnInit, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterLink } from '@angular/router';
 import { HeaderComponent } from '@components/header/header.component';
 import { SidebarComponent } from '@components/sidebar/sidebar.component';
-import { BodyComponent } from '@components/body/body.component';
 import { FooterComponent } from '@components/footer/footer.component';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
@@ -11,7 +10,7 @@ import { MobileWarningModalComponent } from '@components/mobile-warning-modal/mo
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, SidebarComponent, BodyComponent, FooterComponent, MobileWarningModalComponent],
+  imports: [RouterOutlet, RouterLink, HeaderComponent, SidebarComponent, FooterComponent, MobileWarningModalComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
