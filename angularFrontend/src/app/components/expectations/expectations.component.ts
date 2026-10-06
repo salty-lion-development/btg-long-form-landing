@@ -14,13 +14,13 @@ const PILLARS: PillarData[] = [
     iconSrc: 'images/expectations/real-conversations-icon.png',
     title: 'Real Conversation Practice',
     body: 'You don&apos;t learn to speak by studying. You learn by speaking &mdash; with patience, with encouragement, and without judgment. Our native teachers meet you exactly where you are.',
-    mediaSrc: 'images/Sam_Paulina.png'
+    mediaSrc: 'images/zoom_call_transparent.png'
   },
   {
     iconSrc: 'images/expectations/clear-path-icon.png',
     title: 'A Clear Path Forward',
     body: 'Knowing how much you’ve progressed over time can be challenging when you don’t have a standard to measure your progress against. That&apos;s why we built the 12-Milestone Framework. You will always know where you are in your journey and what&apos;s next.',
-    mediaSrc: 'images/clear_path_forward.png'
+    mediaSrc: 'images/A_Clear_Path_Forward_6.png'
   },
   {
     iconSrc: 'images/expectations/community-icon.png',

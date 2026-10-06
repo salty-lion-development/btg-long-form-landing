@@ -6,7 +6,9 @@
   <div class="membership-content">
       <div class="card-body">
       <span class="name">{{name()}}</span>
-      <span class="price">${{yearlyPrice()}} / yr. (${{monthlyPrice()}}/ mo.)</span>
+      <span class="price">${{monthlyPrice()}} per month</span>
+      <!-- <span class="price">${{monthlyPrice()}}/ mo.</span> -->
+      <!-- <span class="price">${{yearlyPrice()}} / yr. (${{monthlyPrice()}}/ mo.)</span> -->
 
 
       <div class="membership-card-content">
@@ -17,6 +19,6 @@
       </div>
     </div>
 
-    <app-cta-button [buttonText]="'Pick Plan'" [buttonHeight]="'2.5rem'" [target]="target()"></app-cta-button>
+    <app-cta-button [buttonText]="'Get Started'" [buttonHeight]="'2.5rem'" [target]="target()"></app-cta-button>
   </div>
 </div>

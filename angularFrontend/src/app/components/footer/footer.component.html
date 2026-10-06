@@ -28,13 +28,15 @@
       (mouseleave)="hide()"
       (click)="copyToClipBoard()"
     >
-      Email Address: <span #emailAddress>hola@btg-spanish.com</span>
+      Email Address: <span #emailAddress>hola@btgspanish.com</span>
     </h5>
 
     <div class="terms-container">
-      <a class="terms" href="https://btgspanish.com/terms/">Terms And Conditions</a>
+      <a class="terms" routerLink="/terms-and-conditions">Terms And Conditions</a>
+      <!-- <a class="terms" href="https://btgspanish.com/terms/">Terms And Conditions</a> -->
       <span>|</span>
-      <a class="privacy" href="https://btgspanish.com/privacy/">Privacy Policy</a>
+      <a class="privacy" routerLink="/privacy-policy">Privacy Policy</a>
+      <!-- <a class="privacy" href="https://btgspanish.com/privacy/">Privacy Policy</a> -->
     </div>
   </div>
 </div>

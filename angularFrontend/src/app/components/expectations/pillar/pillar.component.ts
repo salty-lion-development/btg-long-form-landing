@@ -13,14 +13,20 @@ export class PillarComponent {
   @Input({ required: true }) pillarData!: PillarData;
 
   get isVideo() {
-    if(this.pillarData.mediaSrc.includes('.gif')) {
-      debugger;
-    }
     return this.pillarData.mediaSrc.includes('.mp4') ? true : false;
   }
 
+  get isConversation() {
+    const isConv = this.pillarData.mediaSrc.toLowerCase().includes('zoom') ? true : false;
+    return isConv;
+  }
+
   get isClearPath() {
-    return this.pillarData.mediaSrc.includes('clear_path_forward') ? true : false;
+    return this.pillarData.mediaSrc.toLowerCase().includes('clear') ? true : false;
+  }
+
+  get isCommunity() {
+    return this.pillarData.mediaSrc.toLowerCase().includes('community') ? true : false;
   }
 }
 
