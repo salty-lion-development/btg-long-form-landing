@@ -57,6 +57,6 @@ export class App implements OnInit, OnDestroy {
 
   onRedirectToMobile() {
     // Redirect to mobile site
-    window.location.href = 'https://btgspanish.com/';
+    window.location.href = 'https://legacy.btgspanish.com/';
   }
 }
