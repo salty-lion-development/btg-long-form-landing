@@ -18,3 +18,8 @@ body {
   margin: 0 !important;
   font-family: 'Juturu Variable', sans-serif;
 }
+
+* {
+  //caret: none;
+  caret-color: transparent;
+}
