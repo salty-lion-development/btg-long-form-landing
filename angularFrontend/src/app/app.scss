@@ -53,3 +53,7 @@
     }
   }
 
+body:has(.nav-toggle:checked) {
+  overflow: hidden;
+}
+
