@@ -53,7 +53,6 @@
     }
   }
 
-body:has(.nav-toggle:checked) {
+body.menu-open {
   overflow: hidden;
 }
-

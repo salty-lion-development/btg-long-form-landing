@@ -1,0 +1,21 @@
+<button
+  class="hamburger"
+  type="button" ="open()"
+  aria-controls="site-menu"
+  (click)="toggle()">
+  <span class="sr-only">{{ open() ? 'Close menu' : 'Open menu' }}</span>
+  <span class="bar"></span>
+  <span class="bar"></span>
+  <span class="bar"></span>
+</button>
+
+@if (open()) {
+  <div class="overlay" (click)="close()"></div>
+  <nav class="offcanvas" id="site-menu" aria-label="Primary">
+    <ul>
+      <li><a href="#" (click)="close()">Home</a></li>
+      <li><a href="#" (click)="close()">About</a></li>
+      <li><a href="#" (click)="close()">Contact</a></li>
+    </ul>
+  </nav>
+}

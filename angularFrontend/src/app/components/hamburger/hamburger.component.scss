@@ -1,0 +1,97 @@
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.hamburger {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-content: center;
+  gap: 6px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  padding: 0;
+
+  .bar {
+    width: 28px;
+    height: 3px;
+    background: #000;
+    border-radius: 999px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+
+  // animated icon when open
+  &.is-open .bar:nth-child(2) { opacity: 0; }
+  &.is-open .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  &.is-open .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1000;
+  animation: fadeIn 0.25s ease;
+}
+
+.offcanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: min(320px, 85vw);
+  height: 100dvh;
+  padding: 80px 24px 24px;
+  background: #1b1b1b;
+  color: #fff;
+  z-index: 1001;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  animation: slideIn 0.25s ease;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 12px;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-105%); }
+  to { transform: translateX(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hamburger .bar,
+  .overlay,
+  .offcanvas {
+    transition: none;
+    animation: none;
+  }
+}
