@@ -23,3 +23,17 @@ body {
   //caret: none;
   caret-color: transparent;
 }
+
+body:has(.overlay-menu) {
+  overflow: hidden !important;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+}
+
+html, body {
+  @media (max-width: 768px) {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+}

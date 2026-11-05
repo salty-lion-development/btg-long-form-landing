@@ -1,20 +1,31 @@
-<header class="site-header">
-  <label class="hamburger" for="nav-toggle">
-    <span class="sr-only">Open menu</span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-  </label>
+<div class="hamburger" [class.overlay-menu]="isHamburgerExpanded">
+  <div class="button-wrapper">
+    <button
+      type="button"
+      class="hamburger-btn"
+      aria-label="Menu"
+      aria-expanded="false"
+      aria-controls="main-menu"
+      (click)="toggleHamburger()"
+    >
+      <span class="bar" aria-hidden="true"></span>
+      <span class="bar" aria-hidden="true"></span>
+      <span class="bar" aria-hidden="true"></span>
+    </button>
+  </div>
 
-  <input class="nav-toggle" id="nav-toggle" type="checkbox" />
 
-  <div class="overlay"></div>
-
-  <nav class="offcanvas" aria-label="Primary">
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
+  @if(isHamburgerExpanded) {
+    <ul class="nav-links">
+      @for (link of links(); track link.label) {
+        <li (click)="goToLinkAndCloseMenu()">
+          @if (link.path) {
+            <a routerLink="link.path">{{ link.label }}</a>
+          } @else {
+            <a routerLink="/" [fragment]="link.fragment">{{ link.label }}</a>
+          }
+        </li>
+      }
     </ul>
-  </nav>
-</header>
+  }
+</div>
