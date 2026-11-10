@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     min-height: unset !important;
-    height: 40vh !important;
+    height: fit-content !important;
     background-color: #ecf4ff;
 
     .stats-pill {
@@ -30,8 +30,36 @@
                 filter: brightness(0) saturate(100%) invert(26%) sepia(98%) saturate(4854%) hue-rotate(215deg) brightness(103%) contrast(104%);
                 filter: brightness(0) saturate(100%) invert(29%) sepia(74%) saturate(2576%) hue-rotate(185deg) brightness(90%) contrast(79%);
                 filter: brightness(0) saturate(100%) invert(56%) sepia(29%) saturate(1227%) hue-rotate(163deg) brightness(97%) contrast(101%);
+
+                // @media (max-width: 650px) {
+                //     padding: .25rem 0;
+                // }
             }
+
+            @media (max-width: 1000px) {
+                width: 90%;
+            }
+
+            // @media (max-width: 650px) {
+            //     flex-direction: column;
+            // }
+
+            // p {
+            //     @media (max-width: 650px) {
+            //         margin: unset;
+            //     }
+            // }
         }
+
+        @media (max-width: 1000px) {
+            width: 16rem;
+        }
+
+        // @media (max-width: 650px) {
+        //     height: 5rem;
+        //     width: 11rem;
+        //     transform: translate(0, 3rem);
+        // }
     }
 
     .stats-wrapper {
@@ -39,16 +67,11 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        height: 70%;
+        height: fit-content;
         width: 57%;
+        padding-top: 1.5rem;
         border-radius: 8px;
         background-color: #1b79b6;
-        // background: linear-gradient(
-        // to bottom,
-        //     #0c223f 0%,
-        //     #124a6e 35%,
-        //     #1b79b6 100%
-        // );
         background: linear-gradient(
         to bottom,
             #0c223f 0%,
@@ -56,24 +79,29 @@
             #0aadcc 100%
         );
 
-
         .stats-container {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            height: 67%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
             width: 100%;
+            height: fit-content;
+
+            /* Force single column once three no longer fit cleanly.
+            Adjust the 48rem value if you want the switch to happen earlier/later. */
+            @media (max-width: 1000px) {
+                grid-template-columns: 1fr;
+                justify-items: center;
+            }
 
             div {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                width: 30%;
+                /* width removed — grid controls the sizing now */
                 height: 100%;
                 color: white;
-
-
+                padding: 1.25rem 0;
 
                 img {
                     height: 8rem;
@@ -86,8 +114,93 @@
                     p, h2 {
                         margin: unset;
                     }
+
+                    h2 {
+                        @media (max-width: 1130px) {
+                            font-size: 1.5rem;
+                        }
+
+                        @media (max-width: 1030px) {
+                            font-size: 1.25rem;
+                        }
+
+                        @media (max-width: 1000px) {
+                            font-size: 2rem;
+                        }
+
+                        @media (max-width: 650px) {
+                            font-size: 1.75rem;
+                        }
+                    }
+
+                    p {
+                        @media (max-width: 1315px) {
+                            font-size: .90rem;
+                        }
+
+                        @media (max-width: 1130px) {
+                            font-size: .85rem;
+                        }
+
+                        @media (max-width: 1030px) {
+                            font-size: .80rem;
+                        }
+
+                        @media (max-width: 1000px) {
+                            font-size: 1.25rem;
+                        }
+
+                        @media (max-width: 650px) {
+                            font-size: 1rem;
+                        }
+                    }
                 }
             }
+        }
+
+
+        // .stats-container {
+        //     display: flex;
+        //     flex-direction: row;
+        //     justify-content: space-between;
+        //     height: fit-content;
+        //     width: 100%;
+        //     flex-wrap: wrap;
+
+        //     div {
+        //         display: flex;
+        //         flex-direction: column;
+        //         align-items: center;
+        //         justify-content: center;
+        //         width: 15rem;
+        //         height: 100%;
+        //         color: white;
+        //         padding: 1.25rem 0;
+
+
+
+        //         img {
+        //             height: 8rem;
+        //             width: 8rem;
+        //         }
+
+        //         .stats-copy {
+        //             width: 100%;
+
+        //             p, h2 {
+        //                 margin: unset;
+        //             }
+        //         }
+        //     }
+        // }
+
+        @media (max-width: 1000px) {
+            width: 23rem;
+            padding: 2.5rem 0;
+        }
+
+        @media (max-width: 500px) {
+            width: 19.5rem;
         }
     }
 }

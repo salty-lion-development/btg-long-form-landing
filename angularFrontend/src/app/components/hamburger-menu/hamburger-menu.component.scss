@@ -1,72 +1,98 @@
-.hamburger {
-  .button-wrapper {
-    width: fit-content;
+:host {
+  //position: fixed;
 
-    button.hamburger-btn {
+  .hamburger {
+    .button-wrapper {
+      width: fit-content;
+      position: relative;
+      z-index: 1002; // stays above the overlay
+    }
+
+    .hamburger-btn {
       all: unset;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 1.15rem;
+      position: relative;
+      display: block;
       width: 1.5rem;
+      height: 1.15rem;
+      cursor: pointer;
 
       .bar {
+        position: absolute;
+        left: 0;
         width: 100%;
         height: 2.5px;
         background: #000;
+        border-radius: 2px;
+        transition: transform 0.35s ease, opacity 0.25s ease, top 0.35s ease, background-color 0.35s ease;
+
+        &:nth-child(1) { top: 0; }
+        &:nth-child(2) { top: 50%; transform: translateY(-50%); }
+        &:nth-child(3) { bottom: 0; }
+      }
+
+      &.open .bar {
+        background: #fff;
+      }
+
+      &.open .bar:nth-child(1) {
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+      }
+
+      &.open .bar:nth-child(2) {
+        opacity: 0;
+      }
+
+      &.open .bar:nth-child(3) {
+        bottom: auto;
+        top: 50%;
+        transform: translateY(-50%) rotate(-45deg);
       }
     }
-  }
 
-
-  &.overlay-menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100dvw;
-    height: 100dvh;
-    background-color: #000;
-    z-index: 1000;
-
-    .button-wrapper {
-      position: absolute;
-      top: 0;
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background-color: #000;
+      z-index: 1000;
       display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
       align-items: center;
-      height: 4rem;
-      width: 93%;
-      z-index: 1001;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transform: scale(0.96);
+      transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s;
+      pointer-events: none;
 
-      button.hamburger-btn {
-        .bar {
-          background: #fff;
+      &.open {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+        pointer-events: auto;
+      }
+
+      .nav-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+
+        li a {
+          color: #fff;
+          text-decoration: none;
+          font-size: 1.25rem;
         }
       }
     }
 
-    .nav-links {
-      display: flex;
-      flex-direction: column;
-      list-style: none;
-      gap: 2rem;
-      padding: unset;
-
-      li {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        a {
-          text-decoration: none;
-          color: #fff;
-        }
-      }
+    // Optional: pin the button to the top-right while the menu is open
+    &.menu-open .button-wrapper {
+      position: fixed;
+      top: 1rem;
+      right: 1.25rem;
     }
   }
 }
