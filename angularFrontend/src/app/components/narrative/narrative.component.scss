@@ -4,12 +4,6 @@
     align-items: center;
     justify-content: center;
     background-color: #ecf4ff;
-    //background-color: black;
-    // background-image: url('/images/BTG_BACKGROUND_V1.png');
-    // background-size: cover;
-    // background-position: center;
-    // background-repeat: repeat;
-    // height: fit-content;
 
     .narrative-conatiner {
         display: flex;
@@ -18,63 +12,152 @@
         height: 70%;
         width: 70%;
 
-        .left-side {
-            width: 40rem;
+        .side {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
 
-            h2 {
-                font-size: 1.75rem;
+            &.left-side {
+                align-items: center;
+                width: 40rem;
+
+                h2 {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    font-size: 1.75rem;
+
+                    span:first-of-type {
+                        padding-right: .5rem;
+                    }
+                }
+
+                p {
+                    font-size: 1.15rem;
+                }
             }
 
-            p {
-                font-size: 1.15rem;
+            &.right-side {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                height: 39rem;
+                width: fit-content;
+
+                .working-pic {
+                    height: 19rem;
+                    width: 32rem;
+                    border-radius: 18px;
+                }
+
+                .right-copy-container {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 32rem;
+                    padding: 1rem 0rem 1rem 0rem;
+                    border: 1px solid #f3df27;
+                    border: 1px solid #09768a;
+                    border: 3px solid #0aadcc;
+                    border-radius: 8px;
+
+                    .right-copy {
+                        display: flex;
+                        flex-direction: column;
+                        height: fit-content;
+                        width: 90%;
+
+                        .five-stars {
+                            width: 5rem;
+                            filter: brightness(0) saturate(100%) invert(96%) sepia(32%) saturate(7469%) hue-rotate(336deg) brightness(99%) contrast(94%);
+                            filter: brightness(0) saturate(100%) invert(55%) sepia(66%) saturate(3496%) hue-rotate(154deg) brightness(98%) contrast(92%);
+                            padding: 0rem 0rem .5rem 0rem;
+                        }
+
+                        .bold-text {
+                            font-weight: bold;
+                            margin: unset;
+                        }
+                    }
+                }
             }
         }
 
-        .right-side {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            height: 39rem;
-            width: fit-content;
-
-            .working-pic {
-                height: 19rem;
+        @media(max-width: 1750px) {
+            .side {
                 width: 32rem;
-                border-radius: 18px;
-            }
 
-            .right-copy-container {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 32rem;
-                padding: 1rem 0rem 1rem 0rem;
-                border: 1px solid #f3df27;
-                border: 1px solid #09768a;
-                border: 3px solid #0aadcc;
-                border-radius: 8px;
-
-                 .right-copy {
-                    display: flex;
-                    flex-direction: column;
-                    //align-items: center;
-                    //justify-content: center;
-                    height: fit-content;
-                    width: 90%;
-
-                    .five-stars {
-                        width: 5rem;
-                        filter: brightness(0) saturate(100%) invert(96%) sepia(32%) saturate(7469%) hue-rotate(336deg) brightness(99%) contrast(94%);
-                        filter: brightness(0) saturate(100%) invert(55%) sepia(66%) saturate(3496%) hue-rotate(154deg) brightness(98%) contrast(92%);
-                        padding: 0rem 0rem .5rem 0rem;
-                    }
-
-                    .bold-text {
-                        font-weight: bold;
-                        margin: unset;
+                &.left-side {
+                    .left-side-content {
+                        width: 90%;
                     }
                 }
+
+                &.right-side {
+                    height: unset;
+                    width: 32rem;
+
+                    .right-side-content {
+                        display: flex;
+                        flex-direction: column;
+                        width: 90%;
+                        height: unset;
+
+                        img {
+                            width: 100%;
+                        }
+
+                        .right-copy-container {
+                            width: 100%;
+                            margin-top: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        @media(max-width: 1150px) {
+            flex-direction: column;
+            width: fit-content;
+            height: fit-content;
+            align-items: center;
+            justify-content: center;
+
+            .side {
+                width: 45rem !important;
+
+                &.left-side {
+                    padding-bottom: 2rem;
+
+                    h2 {
+                        flex-wrap: unset;
+                    }
+                }
+            }
+        }
+
+        @media(max-width: 768px) {
+            .side {
+                width: 32rem !important;
+
+                &.left-side {
+                    h2 {
+                        flex-direction: column;
+                        align-items: center;
+                        font-size: 1.25rem;
+                    }
+
+                    p {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+
+        @media(max-width: 550px) {
+            .side {
+                width: 80% !important;
             }
         }
     }
