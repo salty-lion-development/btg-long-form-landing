@@ -10,7 +10,7 @@
   justify-content: center;
   border-radius: 18px;
   height: 30rem;
-  width: 90%;
+  width: 100%;
   background-color: #0c0c0c;
   background-color:  #ecf4ff;
   background-color: #ffffff;
@@ -140,5 +140,82 @@
     padding: 0 1em;
     //align-text: center;
     text-decoration: none;
+  }
+
+  @media(max-width: 1500px) {
+    .membership-container {
+      .membership-content {
+        .card-body {
+          .membership-card-content {
+            span {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media(max-width: 1100px) {
+    .membership-container {
+      .membership-content {
+        .card-body {
+          span {
+            font-size: 1.75rem;
+
+            &.name {
+              font-size: 1.35rem;
+            }
+          }
+          .membership-card-content {
+            span {
+              font-size: .85rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media(max-width: 768px) {
+    .membership-container {
+      .membership-content {
+        .card-body {
+          span {
+            font-size: 1.75rem;
+
+            &.name {
+              font-size: 1.5rem;
+            }
+          }
+          .membership-card-content {
+            span {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media(max-width: 768px) {
+    .membership-container {
+      .membership-content {
+        .card-body {
+          span {
+            font-size: 1.5rem;
+
+            &.name {
+              font-size: 1.25rem;
+            }
+          }
+          .membership-card-content {
+            span {
+              font-size: .80rem;
+            }
+          }
+        }
+      }
+    }
   }
 }

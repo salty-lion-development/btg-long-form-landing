@@ -4,6 +4,7 @@
   background-color: #ecf4ff;
   //background-color: #0aadcc;
   min-height: unset !important;
+  //align-items: center;
 
   .container {
     display: flex;
@@ -31,9 +32,37 @@
 
   .memberships {
     display: grid;
-    grid-template-columns: repeat(2, 36.5rem);
-    gap: none;
+    grid-template-columns: repeat(2, 32.5rem);
+    column-gap: 6rem;
     padding: 2rem 6rem;
+  }
+
+  @media(max-width: 1500px) {
+    .container {
+      .memberships {
+        grid-template-columns: repeat(2, 27rem);
+        column-gap: 3rem;
+      }
+    }
+  }
+
+  @media(max-width: 1100px) {
+    .container {
+      .memberships {
+        grid-template-columns: repeat(2, 19rem);
+        column-gap: 1.75rem;
+      }
+    }
+  }
+
+    @media(max-width: 768px) {
+    .container {
+      .memberships {
+        grid-template-columns: repeat(1, 18rem);
+        column-gap: 0;
+        row-gap: 3rem;
+      }
+    }
   }
 }
 
