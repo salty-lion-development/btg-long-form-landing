@@ -55,12 +55,41 @@
     }
   }
 
-    @media(max-width: 768px) {
+  @media(max-width: 768px) {
     .container {
       .memberships {
-        grid-template-columns: repeat(1, 18rem);
+        grid-template-columns: repeat(1, 100%);
         column-gap: 0;
         row-gap: 3rem;
+        width: 67%;
+      }
+    }
+  }
+
+  @media(max-width: 600px) {
+    .container {
+      .memberships {
+        grid-template-columns: repeat(1, 23.5rem);
+        column-gap: 0;
+        row-gap: 3rem;
+        width: fit-content;
+      }
+    }
+  }
+
+  @media(max-width: 500px) {
+    .container {
+      .memberships {
+        grid-template-columns: repeat(1, 17.5rem);
+      }
+    }
+  }
+
+  @media(max-width: 400px) {
+    .container {
+      .memberships {
+        grid-template-columns: repeat(1, 100%);
+        width: 86%;
       }
     }
   }

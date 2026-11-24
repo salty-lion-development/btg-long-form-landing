@@ -2,8 +2,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 50vh !important;
-    min-height: 50vh !important;
     background-color: #ecf4ff;
     padding: 5rem 0;
 
@@ -19,7 +17,6 @@
         .side-wrapper {
             display: flex;
             flex-direction: column;
-            height: 100%;
             width: 50%;
 
             &.left-side-container {
@@ -173,16 +170,10 @@
         .who-for-container {
             width: 56rem;
 
-            .side-wrapper.right-side-container {
-                .content {
-                    .bottom-section {
-                        .bold-blue {
-                            margin: unset;
-                            padding: unset;
-                            width: 24rem;
-                        }
-                    }
-                }
+            .bold-blue {
+                margin: unset;
+                padding: unset;
+                width: 24rem;
             }
         }
     }
@@ -192,34 +183,106 @@
         min-height: unset;
 
         .who-for-container {
-            width: 43rem;
+            width: 40rem;
 
-            .side-wrapper {
-                &.left-side-container {
-                    display: none;
+            .left-side-container {
+                display: none;
+            }
+
+            .right-side-container {
+                width: 100%;
+
+                .content {
+                    .top-section {
+                        border-top-left-radius: 97px;
+                        border-left: 2px solid #0aadcc;
+                    }
+
+                    .bottom-section {
+                        border-bottom-left-radius: 97px;
+                        border-left: 2px solid #0aadcc;
+                    }
                 }
+            }
 
-                &.right-side-container {
-                    width: 100%;
+            .bold-blue {
+                align-self: center;
+            }
+        }
 
-                    .content {
-                        .top-section {
-                            border-top-left-radius: 97px;
-                            border-left: 2px solid #0aadcc;
-                        }
+    }
 
-                        .bottom-section {
-                            border-bottom-left-radius: 97px;
-                            border-left: 2px solid #0aadcc;
+    @media (max-width: 850px) {
+        .who-for-container {
+            width: 75.3%;
 
-                            .bold-blue {
-                                align-self: center;
+            .right-side-container {
+                .content {
+                    .bottom-section {
+                        .bold-blue {
+                            width: 55%;
+
+                            .community {
+                                display: none;
                             }
                         }
                     }
                 }
             }
         }
+    }
 
+    @media (max-width: 768px) {
+        .who-for-container {
+            .right-side-container {
+                .content {
+                    .bottom-section {
+                        .bold-blue {
+                            width: 17rem;
+                        }
+
+                        padding-bottom: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        .who-for-container {
+            .right-side-container {
+                .content {
+                    p, li {
+                        font-size: .85em;
+                    }
+
+                    h2 {
+                        justify-content: center;
+                        font-size: 1.1em;
+
+                        &::before,
+                        &::after {
+                            display: none;
+                        }
+                    }
+
+                    h3 {
+                        font-size: 1.05em;
+                    }
+
+                    .bottom-section {
+                        .bold-blue {
+                            width: 12rem;
+
+                            .explore {
+                                display: none;
+                            }
+                        }
+
+                        padding-bottom: .5rem;
+                    }
+                }
+            }
+        }
     }
 }

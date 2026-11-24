@@ -182,10 +182,10 @@
       .membership-content {
         .card-body {
           span {
-            font-size: 1.75rem;
+            font-size: 2rem;
 
             &.name {
-              font-size: 1.5rem;
+              font-size: 1.75rem;
             }
           }
           .membership-card-content {
@@ -198,7 +198,7 @@
     }
   }
 
-  @media(max-width: 768px) {
+  @media(max-width: 500px) {
     .membership-container {
       .membership-content {
         .card-body {
@@ -211,7 +211,7 @@
           }
           .membership-card-content {
             span {
-              font-size: .80rem;
+              font-size: .77rem;
             }
           }
         }
