@@ -17,29 +17,60 @@
     position: relative;
     display: flex;
     flex-direction: column;
-
     gap: 1em;
 
-    >div {
+    >div {                    // the absolute line container
       position: absolute;
+      inset: 0;               // top/right/bottom/left: 0
+      pointer-events: none;   // so it never blocks clicks
       z-index: 1;
-      display: grid;
-      grid-template-columns: 1fr 5fr 6fr;
-      gap: 2em;
-      width: 100%;
-      height: 100%;
 
       i {
-        justify-self: center;
+        position: absolute;
+        left: 4.9rem;         // ← adjust this one value (or use a custom property)
+        top: 0;
+        bottom: 0;
         width: 0;
-        // border-right: #D9D9D9 solid 3px;
-        border-right: #0aadcc solid 3px;
-        z-index: -3;
+        border-right: 3px solid #0aadcc;
+        z-index: -1;
       }
     }
 
     pillar {
       height: 37rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    >div {
+      >div {
+        i {
+          left: 49.5%;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 650px) {
+    padding: 2rem 0;
+    >div {
+      width: 93%;
+    }
+  }
+
+  @media (max-width: 550px) {
+    >div {
+      >div {
+        i {
+          left: 45.5%;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 450px) {
+    >div {
+      width: 99%;
     }
   }
 }

@@ -36,7 +36,7 @@
                 align-items: center;
                 justify-content: center;
                 height: 95%;
-                width: 34rem;
+                width: 80%;
 
                 .heading {
                     align-self: flex-start;
@@ -55,7 +55,87 @@
             img {
                 border-radius: 23px;
                 height: 40rem;
-                width: 36rem;
+                width: 92%;
+            }
+        }
+    }
+
+    @media(max-width: 1300px) {
+        .why-container {
+            width: 92vw;
+
+            img {
+                width: 82%;
+            }
+        }
+    }
+
+    @media(max-width: 1150px) {
+        background: #0aadcc;
+
+        .why-container {
+            flex-direction: column-reverse;
+            width: 70vw;
+            row-gap: 2rem;
+
+            .left-content,
+            .right-content {
+                width: 100%;
+
+                .copy-container {
+                    width: 31.75rem;
+
+                    h1 {
+                        align-self: center !important;
+                    }
+                }
+
+                img {
+                    height: 19rem;
+                    width: 18rem;
+                }
+            }
+        }
+    }
+
+    @media(max-width: 768px) {
+        .why-container {
+            .left-content {
+                .copy-container {
+                    width: 94%;
+
+                    h1 {
+                        font-size: 1.65em;
+                    }
+                }
+            }
+        }
+    }
+
+    @media(max-width: 550px) {
+        .why-container {
+            .left-content {
+                .copy-container {
+                    width: 94%;
+
+                    h1 {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        font-size: 1.65em;
+                    }
+
+                    p {
+                        font-size: .9em;
+                    }
+                }
+            }
+
+            .right-content {
+                img {
+                    height: 16.5rem;
+                    width: 15.5rem;
+                }
             }
         }
     }
