@@ -1,8 +1,8 @@
-<div class="track">
+<div class="track" id="track-id">
   @for (item of [].constructor(2); track $index) {
     <div class="entry-group">
       @for (entry of entries; track entry) {
-        <div class="entry">
+        <div class="entry" (touchend)="clickityClick()">
           <div class="front">
             <img [src]="getFrontImgUrl(entry.name)">
           </div>

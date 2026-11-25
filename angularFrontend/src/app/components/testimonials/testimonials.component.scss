@@ -88,9 +88,19 @@
           cursor: pointer;
           transform: rotateY(180deg);
           transition: transform 1s;
-
           .back {
             transition: transform 1s;
+          }
+        }
+
+        @media (max-width: 768px) {
+          &:hover {
+            cursor: unset;
+            transform: unset;
+            transition: unset;
+            .back {
+              transition: unset;
+            }
           }
         }
       }

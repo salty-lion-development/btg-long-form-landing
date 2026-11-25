@@ -27,6 +27,7 @@ export class TestimonialsComponent {
 
   constructor() { }
 
+
   getFrontImgUrl(name: string): string {
     let currentName = name.toUpperCase();
 
@@ -37,6 +38,17 @@ export class TestimonialsComponent {
     let currentName = name.toUpperCase();
 
     return 'images/' + currentName + '_2' + '.png';
+  }
+
+  clickityClick(): void {
+    const track = document.getElementById('track-id');
+
+    if (!track) return;
+
+    track.style.backgroundColor = "orange";
+    if (window.innerWidth >= 768) return;
+
+    console.log('handleClick called for entry:');
   }
 
 }
