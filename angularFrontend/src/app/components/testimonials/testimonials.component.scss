@@ -94,6 +94,11 @@
         }
 
         @media (max-width: 768px) {
+          width: 85vw;
+
+          .front, .back {
+            width: 86%;
+          }
           &:hover {
             cursor: unset;
             transform: unset;
@@ -101,6 +106,17 @@
             .back {
               transition: unset;
             }
+          }
+        }
+
+        @media (max-width: 768px) {
+          :host {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+          }
+
+          .track {
+            animation: none !important;
           }
         }
       }

@@ -2,7 +2,8 @@
   @for (item of [].constructor(2); track $index) {
     <div class="entry-group">
       @for (entry of entries; track entry) {
-        <div class="entry" (touchend)="clickityClick()">
+        <!-- <div class="entry" [id]="entry.name" (touchend)="clickityClick(entry.name)"> -->
+        <div class="entry" (touchend)="clickityClick($event)">
           <div class="front">
             <img [src]="getFrontImgUrl(entry.name)">
           </div>
