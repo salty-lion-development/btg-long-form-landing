@@ -40,37 +40,12 @@ export class TestimonialsComponent {
     return 'images/' + currentName + '_2' + '.png';
   }
 
-  // clickityClick(id: string): void {
-  //   console.log("Entered clickityClick with id:", id);
-  //   if (window.innerWidth >= 768) return;
-
-
-  //   const entry = document.getElementById(id) as HTMLElement | null;
-
-
-  //   if (!entry) return;
-  //   if (entry.style.length > 1) {
-  //     console.log("styleCount: ", entry.style.length);
-  //     entry.style.cssText = 'transform: rotateY(360deg); transition: transform 1s;';
-
-  //     setTimeout(() => {
-  //        entry.removeAttribute('style');
-  //     }, 1500);
-
-
-  //     return;
-  //   }
-
-
-  //   entry.style.cssText = 'cursor: pointer; transform: rotateY(180deg); transition: transform 1s;';
-  //   //back.style.cssText = 'transform: rotateY(0deg);';
-  // }
-
   clickityClick(event: Event): void {
     if (window.innerWidth >= 768) return;
 
     const entry = event.currentTarget as HTMLElement;
-    if (!entry) return;
+    const track = entry.closest('.track') as HTMLElement;
+    if (!entry || !track) return;
 
     // Smoothly center the tapped card
     entry.scrollIntoView({
@@ -82,11 +57,13 @@ export class TestimonialsComponent {
     // Existing flip toggle logic
     if (entry.style.length > 1) {
       entry.style.cssText = 'transform: rotateY(360deg); transition: transform 1s;';
+      track.style.cssText = 'animation-play-state: running;';
       setTimeout(() => entry.removeAttribute('style'), 1500);
       return;
     }
 
     entry.style.cssText = 'cursor: pointer; transform: rotateY(180deg); transition: transform 1s;';
+    track.style.cssText = 'animation-play-state: paused;';
   }
 
 }

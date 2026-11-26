@@ -6,54 +6,38 @@
   overflow: hidden;
   padding: 4rem 0rem 6rem 0rem;
 
-  .track {
-  display: flex;
-  width: max-content;
-  will-change: transform;
-  animation: scrollLoop 45s linear infinite;
-}
 
-/* Pause the scrolling when a user hovers over it */
-.track:hover {
-  animation-play-state: paused;
-}
-
-.entry-group {
-  display: flex;
-}
-
-@keyframes scrollLoop {
-  0% {
-    transform: translateX(0);
+  @keyframes scrollLoop {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      /* Moves left by exactly half the full width (one entire group) */
+      transform: translateX(-40%);
+    }
   }
-  100% {
-    /* Moves left by exactly half the full width (one entire group) */
-    transform: translateX(-40%);
-  }
-}
-
-.entry {
-  width: 25rem;
-  height: 25rem;
-  background-color: #e4ece1;
-  border-radius: 10px;
-  padding: 1rem;
-  margin: 0 1rem;
-
-  -webkit-transform: translateZ(0);
-}
 
   .track {
+    display: flex;
+    width: max-content;
+    will-change: transform;
+    animation: scrollLoop 45s linear infinite;
 
     .entry-group {
+      display: flex;
       .entry {
-        position: relative;
         width: 25rem;
         height: 25rem;
+        padding: 1rem;
+        margin: 0 1rem;
+        position: relative;
+        border-radius: 10px;
         perspective: 1000px;
+        background-color: #e4ece1;
         transition: transform 0.7s;
         transform-style: preserve-3d;
         transition: transform 1s;
+        -webkit-transform: translateZ(0);
 
         .front, .back {
           position: absolute;
@@ -117,9 +101,20 @@
 
           .track {
             animation: none !important;
+
           }
         }
       }
+    }
+
+    &:hover {
+      animation-play-state: paused;
+    }
+
+    @media (max-width: 768px) {
+     &:hover {
+        animation-play-state: running;
+     }
     }
   }
 }
